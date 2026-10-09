@@ -1,8 +1,11 @@
-import { motion } from "motion/react";
+import { motion } from 'motion/react';
 
 const Header = () => {
   return (
-    <div className="relative min-h-screen grid grid-cols-1 md:grid-cols-2 items-center bg-linear-to-br from-orange-800 via-red-800 to-amber-500 overflow-hidden px-4 md:px-40">
+    <div className="relative min-h-screen grid grid-cols-1 md:grid-cols-2 items-center bg-[url('/images/banner-tahu-kocek.webp')] bg-cover bg-center bg-no-repeat overflow-hidden px-4 md:px-40">
+      {/* Overlay gelap opsional agar teks putih tetap mudah dibaca */}
+      <div className="absolute inset-0 bg-black/40 pointer-events-none" />
+
       {/* decorative blob */}
       <div className="absolute -top-24 -right-24 w-96 h-96 bg-amber-500/30 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-red-900/30 rounded-full blur-3xl pointer-events-none" />
@@ -20,7 +23,7 @@ const Header = () => {
         <h1 className="text-white font-extrabold text-5xl md:text-7xl leading-tight drop-shadow-md">
           Tahu Kocek
           <br />
-          <span className="text-yellow-200">Merona</span>
+          <span className="text-yellow-400">Merona</span>
         </h1>
         <p className="text-white/90 text-lg md:text-xl max-w-lg leading-relaxed">
           Perpaduan tahu lembut, sambal bawang segar, dan sensasi rasa yang
@@ -45,7 +48,7 @@ const Header = () => {
         <img
           src="/images/tahu-kocek-merona.png"
           alt="Tahu Kocek Merona"
-          className="w-72 md:w-140 drop-shadow-2xl object-contain"
+          className="w-100 md:w-140 drop-shadow-2xl object-contain"
         />
       </motion.div>
     </div>
